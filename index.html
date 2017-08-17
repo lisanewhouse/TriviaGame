@@ -1,0 +1,162 @@
+<!-- trivia game psudo-code
+
+	QUESTIONS:
+	-On July 4, 1776, the Declaration of Independence was issued, establishing the United States of America.
+	-On February 25, 2013, the estimated population of the US was 315,568,000.
+	-Hawaii is the most recent of the 50 states in the US (joining in 1959) and is the only one made up entirely of islands.
+	-The most populated city in the US is New York City, followed by Los Angeles and Chicago.
+	-The US was the leading force behind the development of the Internet.
+	-The first man to walk on the moon was American Neil Armstrong (July 21, 1969).
+	-The US consumes more petroleum than any other country in the world.
+	-The current 50-star American flag was designed by a 17-year-old as a school project in 1958. He got a B-
+	-Statistically, the deadliest job in America is … president. Of the  45 men who’ve held the post, four have been assassinated in office— a rate of roughly 9 percent (or about one in ten) killed on the job.
+	-The only U.S. president to own a patent and a saloon: Abraham Lincoln. His patent was for a device to lift boats over sandbars. His saloon was a miserable failure.
+	- -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Trivia Game</title>
+
+	 <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Overlock" rel="stylesheet">
+
+	<link rel=stylesheet type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+<div class="container">
+	<div class="jumbotron">
+		<h1>Trivia Game</h1>
+		<div class="timer" id="timer">
+		</div>
+	</div>
+
+	<div class="questions justify-content-md-center ">
+		<form class="panel panel-info question" id="q1">
+			<div class="panel-heading">
+				<h5>Question 1</h5>
+			</div>
+			<div class="panel-body">
+				<p>On July 4, 1776, the Declaration of Independence was issued, establishing the United States of America.</p>
+				<label class="radio-inline"><input id="t1" type="radio" name="optradio">True</label>
+				<label class="radio-inline"><input type="radio" name="optradio">False</label>
+			</div>
+		</form>
+		<form class="panel panel-danger question" id="q2">
+			<div class="panel-heading">
+				<h5>Question 2</h5>
+			</div>
+			<div class="panel-body">
+				<p>On February 25, 2013, the estimated population of the US was 315,568,000.</p>
+				<label class="radio-inline"><input type="radio" name="optradio">True</label>
+				<label class="radio-inline"><input type="radio" name="optradio">False</label>
+			</div>
+		</form>
+		<form class="panel panel-info question" id="q3">
+			<div class="panel-heading">
+				<h5>Question 3</h5>
+			</div>
+			<div class="panel-body">
+				<p>Hawaii is the most recent of the 50 states in the US (joining in 1959) and is the only one made up entirely of islands.</p>
+				<label class="radio-inline"><input type="radio" name="optradio">True</label>
+				<label class="radio-inline"><input type="radio" name="optradio">False</label>
+			</div>
+		</form>
+		<form class="panel panel-danger question" id="q4">
+			<div class="panel-heading">
+				<h5>Question 4</h5>
+			</div>
+			<div class="panel-body">
+				<p>The most populated city in the US is New York City, followed by Los Angeles and Chicago.</p>
+				<label class="radio-inline"><input type="radio" name="optradio">True</label>
+				<label class="radio-inline"><input type="radio" name="optradio">False</label>
+			</div>
+		</form>
+		<form class="panel panel-info question" id="q5">
+			<div class="panel-heading">
+				<h5>Question 5</h5>
+			</div>
+			<div class="panel-body">
+				<p>The US was the leading force behind the development of the Internet.</p>
+				<label class="radio-inline"><input type="radio" name="optradio">True</label>
+				<label class="radio-inline"><input type="radio" name="optradio">False</label>
+			</div>
+		</form>
+		<form class="panel panel-danger question" id="q6">
+			<div class="panel-heading">
+				<h5>Question 6</h5>
+			</div>
+			<div class="panel-body">
+				<p>The first man to walk on the moon was American Neil Armstrong (July 21, 1969)</p>
+				<label class="radio-inline"><input type="radio" name="optradio">True</label>
+				<label class="radio-inline"><input type="radio" name="optradio">False</label>
+			</div>
+		</form>
+		<form class="panel panel-info question" id="q7">
+			<div class="panel-heading">
+				<h5>Question 7</h5>
+			</div>
+			<div class="panel-body">
+				<p>The US consumes more petroleum than any other country in the world.</p>
+				<label class="radio-inline"><input type="radio" name="optradio">True</label>
+				<label class="radio-inline"><input type="radio" name="optradio">False</label>
+			</div>
+		</form>
+		<form class="panel panel-danger question" id="q8">
+			<div class="panel-heading">
+				<h5>Question 8</h5>
+			</div>
+			<div class="panel-body">
+				<p>The current 50-star American flag was designed by a 17-year-old as a school project in 1958. He got a B-</p>
+				<label class="radio-inline"><input type="radio" name="optradio">True</label>
+				<label class="radio-inline"><input type="radio" name="optradio">False</label>
+			</div>
+		</form>
+		<form class="panel panel-info question" id="q9">
+			<div class="panel-heading">
+				<h5>Question 9</h5>
+			</div>
+			<div class="panel-body">		
+				<p>Statistically, the deadliest job in America is … president. Of the  45 men who’ve held the post, four have been assassinated in office— a rate of roughly 9 percent (or about one in ten) killed on the job.</p>
+				<label class="radio-inline"><input type="radio" name="optradio">True</label>
+				<label class="radio-inline"><input type="radio" name="optradio">False</label>
+			</div>
+		</form>
+		<form class="panel panel-danger question" id="q10">
+			<div class="panel-heading">
+				<h5>Question 10</h5>
+			</div>
+			<div class="panel-body">		
+				<p>The only U.S. president to own a patent and a saloon: Abraham Lincoln. His patent was for a device to lift boats over sandbars. His saloon was a miserable failure.	</p>
+				<label class="radio-inline"><input type="radio" name="optradio">True</label>
+				<label class="radio-inline"><input type="radio" name="optradio">False</label>
+			</div>
+		</form>
+	</div>
+</div>
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
